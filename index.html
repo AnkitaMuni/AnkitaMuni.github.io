@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankita Muni | Computer Science Student & Portfolio</title>
+    <meta name="description" content="Portfolio of Ankita Muni, a dedicated B. Tech Computer Science and Engineering student at PES University. Discover interactive projects, skills, and certifications.">
+    <meta name="keywords" content="Ankita Muni, Computer Science, Portfolio, PES University, B.Tech, Software Engineer, Python, AI/ML, Kafka, Raft Consensus">
+    <meta name="author" content="Ankita Muni">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Radiant Gradient Orbs for background depth -->
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+
+    <!-- ==========================================================================
+       STICKY NAVIGATION BAR
+       ========================================================================== -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">
+                <span class="gradient-text"></span>AnkitaMuni<span class="gradient-text"></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#terminal">Console</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <svg class="moon-icon" viewBox="0 0 24 24">
+                        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+                    </svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                </button>
+                
+                <!-- Mobile Hamburger Button -->
+                <button class="menu-btn" id="menu-btn" aria-label="Open navigation menu">
+                    &#9776;
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+           HERO SECTION
+           ========================================================================== */ -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span></span> Actively Seeking Opportunities
+                    </div>
+                    <h1 class="hero-title">Hello, I'm <br><span class="gradient-text">Ankita Muni</span></h1>
+                    <div class="hero-subtitle" id="typewriter-text"></div>
+                    <p class="hero-desc">
+                        A B.Tech Computer Science and Engineering student at PES University (RR Campus). Highly enthusiastic about AI/ML, distributed systems, streaming architecture, and creating digital interfaces that combine clean logic with visual beauty.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore Projects
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-avatar-container">
+                        <div class="hero-avatar-glow"></div>
+                        <div class="hero-avatar-border"></div>
+                        <div class="hero-avatar-inner">
+                            <!-- Custom Glowing Tech SVG Emblem -->
+                            <svg viewBox="0 0 100 100" id="avatar-svg">
+                                <defs>
+                                    <linearGradient id="avatar-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="var(--accent-1)" />
+                                        <stop offset="100%" stop-color="var(--accent-2)" />
+                                    </linearGradient>
+                                </defs>
+                                <polygon points="50,15 90,38 90,83 50,95 10,83 10,38" stroke="url(#avatar-gradient)" stroke-width="2.5" fill="none" />
+                                <polygon points="50,23 83,42 83,78 50,87 17,78 17,42" stroke="url(#avatar-gradient)" stroke-width="1.2" stroke-dasharray="3, 3" fill="none" />
+                                <path d="M35,45 L50,35 L65,45 M35,55 L50,65 L65,55" stroke="url(#avatar-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                <circle cx="50" cy="50" r="6" fill="url(#avatar-gradient)" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           ABOUT ME & EDUCATION SECTION
+           ========================================================================== -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About & Education</h2>
+                <div class="about-grid">
+                    
+                    <!-- Bio & Details Card -->
+                    <div class="about-info glass reveal">
+                        <p class="about-text">
+                            I am a third-year Computer Science and Engineering student at PES University, Bangalore, with a passion for designing automated, digitally-secure, and highly collaborative systems. I specialize in solving complex problems—ranging from distributed consensus challenges to dynamic bioacoustic telemetry engines.
+                        </p>
+                        <p class="about-text">
+                            Combining analytical depth with technical expertise in programming languages like Python and C, my academic journey is centered around designing intelligent microservices and streaming infrastructures.
+                        </p>
+                        <ul class="about-details">
+                            <li>
+                                <strong>University</strong>
+                                PES University (RR Campus)
+                            </li>
+                            <li>
+                                <strong>Current CGPA</strong>
+                                7.89 / 10.0
+                            </li>
+                            <li>
+                                <strong>Location</strong>
+                                Bengaluru, India
+                            </li>
+                            <li>
+                                <strong>Email</strong>
+                                ankitamuni2005@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive Education Timeline -->
+                    <div class="education-timeline reveal">
+                        
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <span class="timeline-date">2023 — 2027</span>
+                            <div class="timeline-content glass glass-hover">
+                                <h3 class="timeline-title">PES University (RR Campus)</h3>
+                                <p class="timeline-subtitle">Bachelor of Technology (CSE)</p>
+                                <p class="timeline-desc">Focused coursework in Distributed Systems, Artificial Intelligence, Database Management, and Networking. Actively building advanced engineering projects. CGPA: 7.89</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <span class="timeline-date">2022 — 2023</span>
+                            <div class="timeline-content glass glass-hover">
+                                <h3 class="timeline-title">Lake Montfort School</h3>
+                                <p class="timeline-subtitle">12th Grade CBSE Board</p>
+                                <p class="timeline-desc">Specialized in Physics, Chemistry, Mathematics, and Computer Science. Secured a percentage of 84.8%.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <span class="timeline-dot"></span>
+                            <span class="timeline-date">2020 — 2021</span>
+                            <div class="timeline-content glass glass-hover">
+                                <h3 class="timeline-title">Lake Montfort School</h3>
+                                <p class="timeline-subtitle">10th Grade CBSE Board</p>
+                                <p class="timeline-desc">Acquired strong foundational analytical skills. Graduated with a high score of 91.3%.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           SKILLS DASHBOARD
+           ========================================================================== -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    
+                    <!-- Languages -->
+                    <div class="skills-category glass reveal">
+                        <div class="skills-cat-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            Languages
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C / C++</span>
+                                    <span class="skill-level">Proficient</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">R & MATLAB</span>
+                                    <span class="skill-level">Basic</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="55%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skills-category glass reveal">
+                        <div class="skills-cat-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            Web Development
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-level">Proficient</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Flask (Python)</span>
+                                    <span class="skill-level">Proficient</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Streamlit & Web UI</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="skills-category glass reveal">
+                        <div class="skills-cat-title">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            Infrastructure & Data
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Apache Kafka</span>
+                                    <span class="skill-level">Proficient</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="78%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Kafka Admin & Sockets</span>
+                                    <span class="skill-level">Proficient</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Data Analysis & Tableau</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Blockchain & Git</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar" data-level="70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           PROJECTS SHOWCASE SECTION
+           ========================================================================== -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <!-- Portfolio Analytics Dashboard -->
+                <div class="projects-dashboard glass reveal" id="projects-dashboard">
+                    <div class="dashboard-chart-side">
+                        <svg viewBox="0 0 200 200" id="donut-svg">
+                            <defs>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Donut segments injected by script -->
+                        </svg>
+                        <div class="chart-center-label">
+                            <span id="chart-center-count">18</span>
+                            <span id="chart-center-text">Total Repos</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-legend-side">
+                        <h3 class="dashboard-dash-title gradient-text">Engineering Portfolio Analytics</h3>
+                        <p class="dashboard-dash-desc">Interactive distribution of your 18 repositories by technical domain. Hover over sectors to inspect focus areas, and click any slice to filter the project gallery below!</p>
+                        <ul class="dashboard-legend" id="dashboard-legend">
+                            <!-- Legend items injected by script -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="projects-controls reveal">
+                    <!-- Category Filters -->
+                    <div class="filter-tabs" id="filter-tabs">
+                        <button class="filter-tab active" data-category="all">All Projects</button>
+                        <button class="filter-tab" data-category="ai-ml">AI & Data Science</button>
+                        <button class="filter-tab" data-category="systems">Systems & Sockets</button>
+                        <button class="filter-tab" data-category="web-fullstack">Web / Fullstack</button>
+                        <button class="filter-tab" data-category="hardware">IoT & Hardware</button>
+                    </div>
+                    
+                    <!-- Text Search -->
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="search-input" placeholder="Search projects by tech/name...">
+                        <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Projects grid, fully populated dynamically or natively with standard cards -->
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Project cards will be populated via script for rich content structure, but we include them here as index-search fallback -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           INTERACTIVE DEVELOPER TERMINAL CONSOLE
+           ========================================================================== -->
+        <section id="terminal" class="terminal-section">
+            <div class="container">
+                <h2 class="section-title">Interactive Console</h2>
+                
+                <div class="terminal-widget reveal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="terminal-dot td-close"></span>
+                            <span class="terminal-dot td-min"></span>
+                            <span class="terminal-dot td-max"></span>
+                        </div>
+                        <div class="terminal-title-text">ankita-muni@pes-university:~</div>
+                        <div></div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-welcome">
+                            <p>=========================================================</p>
+                            <p>ANKITA MUNI'S INTERACTIVE DEVELOPER CONSOLE [Version 1.0.0]</p>
+                            <p>(c) 2026 Ankita Muni. CSE student @ PES University.</p>
+                            <p>Type <span class="highlight">help</span> to list available commands and navigate the portfolio.</p>
+                            <p>=========================================================</p>
+                        </div>
+                        
+                        <div id="terminal-history"></div>
+                        
+                        <div class="terminal-prompt-line">
+                            <span class="terminal-prompt-prefix">visitor@ankitamuni:~$</span>
+                            <div class="terminal-input-container">
+                                <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" autofocus>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           CONTACT & SOCIAL LINKS
+           ========================================================================== -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Connect With Me</h2>
+                
+                <div class="contact-grid">
+                    
+                    <div class="contact-sidebar reveal">
+                        <!-- Contact info card -->
+                        <div class="contact-info-card glass">
+                            <h3 class="contact-info-title gradient-text">Contact Information</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <div class="contact-list-icon">
+                                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    </div>
+                                    <div class="contact-list-text">
+                                        <span>Phone</span>
+                                        <a href="tel:+918970900660">+91 8970900660</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-list-icon">
+                                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    </div>
+                                    <div class="contact-list-text">
+                                        <span>Email</span>
+                                        <a href="mailto:ankitamuni2005@gmail.com">ankitamuni2005@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="contact-list-icon">
+                                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </div>
+                                    <div class="contact-list-text">
+                                        <span>Location</span>
+                                        <p>Bengaluru, Karnataka, India</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Social Cards -->
+                        <div class="contact-info-card glass">
+                            <h3 class="contact-info-title gradient-text">Profiles & Networks</h3>
+                            <div class="social-links">
+                                <a href="https://github.com/AnkitaMuni" target="_blank" class="social-link" aria-label="GitHub Profile">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ankita-muni-66512331a" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form Wrapper -->
+                    <div class="contact-form-wrapper glass reveal">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" class="form-control" placeholder="Collaboration opportunity..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" class="form-control" placeholder="Hey Ankita, let's talk about..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                                <span>Send Message</span>
+                                <span class="spinner"></span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="footer-copy">&copy; 2026 Ankita Muni. Built with Passion & Vanilla Code.</p>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="Resume.docx" download class="gradient-text" style="font-weight: 600;">Download Resume</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       INTERACTIVE DETAIL MODAL PORTAL
+       ========================================================================== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-card" id="modal-card">
+            <!-- Content dynamically generated inside script.js -->
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
