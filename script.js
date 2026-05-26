@@ -738,37 +738,90 @@ function initContactForm() {
         spinner.style.display = "inline-block";
         submitBtn.style.background = "linear-gradient(135deg, var(--accent-3) 0%, var(--accent-2) 100%)";
         
-        // Simulate network processing
-        setTimeout(() => {
-            // Restore state with green glowing Success!
+        // Prepare form data
+        const name = document.getElementById("form-name").value;
+        const email = document.getElementById("form-email").value;
+        const subject = document.getElementById("form-subject").value;
+        const message = document.getElementById("form-message").value;
+        
+        const formData = {
+            access_key: "b97c45e9-ab66-4c01-bc0a-b098ee556f2d", // Integrated Web3Forms Access Key
+            name: name,
+            email: email,
+            subject: subject,
+            message: `Subject: ${subject}\n\n${message}`
+        };
+        
+        // Active fetch request to Web3Forms API
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Success! Restore state with green glowing Success
+                spinner.style.display = "none";
+                btnText.textContent = "Message Dispatched! ✓";
+                
+                const alertBox = document.createElement("div");
+                alertBox.className = "glass reveal visible";
+                alertBox.style.padding = "1rem";
+                alertBox.style.marginTop = "1rem";
+                alertBox.style.borderColor = "var(--accent-3)";
+                alertBox.style.backgroundColor = "rgba(16, 185, 129, 0.1)";
+                alertBox.innerHTML = `
+                    <p style="color: var(--accent-3); font-weight: 600; font-size: 0.95rem;">
+                        🚀 Encryption handshake successful! Your message has been sent successfully. Ankita will reply shortly.
+                    </p>
+                `;
+                
+                form.appendChild(alertBox);
+                
+                // Clean up and reset form after 4 seconds
+                setTimeout(() => {
+                    alertBox.remove();
+                    form.reset();
+                    submitBtn.disabled = false;
+                    btnText.textContent = "Send Message";
+                    submitBtn.style.background = "";
+                }, 4000);
+            } else {
+                throw new Error(data.message || "Failed to dispatch message.");
+            }
+        })
+        .catch(error => {
+            // Error! Restore state with red warning
             spinner.style.display = "none";
-            btnText.textContent = "Message Dispatched! ✓";
+            btnText.textContent = "Dispatch Failed ✗";
+            submitBtn.style.background = "var(--accent-4)";
             
-            // Output custom alert inside form
             const alertBox = document.createElement("div");
             alertBox.className = "glass reveal visible";
             alertBox.style.padding = "1rem";
             alertBox.style.marginTop = "1rem";
-            alertBox.style.borderColor = "var(--accent-3)";
-            alertBox.style.backgroundColor = "rgba(16, 185, 129, 0.1)";
+            alertBox.style.borderColor = "var(--accent-4)";
+            alertBox.style.backgroundColor = "rgba(244, 63, 94, 0.1)";
             alertBox.innerHTML = `
-                <p style="color: var(--accent-3); font-weight: 600; font-size: 0.95rem;">
-                    🚀 Encryption handshake successful! Your message has been sent successfully. Ankita will reply shortly.
+                <p style="color: var(--accent-4); font-weight: 600; font-size: 0.95rem;">
+                    ⚠️ Dispatch error: ${error.message}. Please email me directly instead.
                 </p>
             `;
             
             form.appendChild(alertBox);
             
-            // Clean up alert and reset form after 4 seconds
+            // Clean up and reset button after 5 seconds
             setTimeout(() => {
                 alertBox.remove();
-                form.reset();
                 submitBtn.disabled = false;
                 btnText.textContent = "Send Message";
                 submitBtn.style.background = "";
-            }, 4000);
-            
-        }, 1800);
+            }, 5000);
+        });
     });
 }
 
