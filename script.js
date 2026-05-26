@@ -776,7 +776,7 @@ function initContactForm() {
                 alertBox.style.backgroundColor = "rgba(16, 185, 129, 0.1)";
                 alertBox.innerHTML = `
                     <p style="color: var(--accent-3); font-weight: 600; font-size: 0.95rem;">
-                        🚀 Encryption handshake successful! Your message has been sent successfully. Ankita will reply shortly.
+                        🚀 Active API Handshake Successful! Your message has been dispatched straight to Ankita's inbox.
                     </p>
                 `;
                 
